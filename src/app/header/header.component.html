@@ -1,0 +1,14 @@
+<body>
+  <p>{{ "Could you tell us your name?" }} {{ getName() }}</p>
+
+  <label>Your name is</label>
+  <br />
+
+  <input type="text" [(ngModel)]="serverName" />
+  <button [disabled]="!allowNewServer" (click)="onCreateServer()">
+    Add Name
+  </button>
+  <p>{{ serverName }}</p>
+  <p [innerText]="allowNewServer"></p>
+  <p>{{ serverCreationStatus }}</p>
+</body>
